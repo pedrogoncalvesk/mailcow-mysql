@@ -6,4 +6,6 @@ COPY my.cnf /etc/mysql/conf.d/
 
 RUN chmod -R 644 /etc/mysql/conf.d/
 
+EXPOSE 3306
+
 CMD ["mysqld", "--max_allowed_packet=192M", "--max-connections=1500", "--innodb-strict-mode=0", "--skip-host-cache", "--skip-name-resolve", "--log-warnings=0"]
